@@ -8,23 +8,54 @@ public class Method {
         int gradeCase = (int) (gpa * 10);
         switch (gradeCase) {
             case 40: // 4.0 and above
-            case 41: case 42: case 43: case 44: case 45: case 46: case 47: case 48: case 49: case 50:
+            case 41:
+            case 42:
+            case 43:
+            case 44:
+            case 45:
+            case 46:
+            case 47:
+            case 48:
+            case 49:
+            case 50:
                 return "A+";
-            case 37: case 38: case 39:
+            case 37:
+            case 38:
+            case 39:
                 return "A";
-            case 33: case 34: case 35: case 36:
+            case 33:
+            case 34:
+            case 35:
+            case 36:
                 return "A-";
-            case 30: case 31: case 32:
+            case 30:
+            case 31:
+            case 32:
                 return "B+";
-            case 27: case 28: case 29:
+            case 27:
+            case 28:
+            case 29:
                 return "B";
-            case 23: case 24: case 25: case 26:
+            case 23:
+            case 24:
+            case 25:
+            case 26:
                 return "B-";
-            case 20: case 21: case 22:
+            case 20:
+            case 21:
+            case 22:
                 return "C+";
-            case 17: case 18: case 19:
+            case 17:
+            case 18:
+            case 19:
                 return "C";
-            case 10: case 11: case 12: case 13: case 14: case 15: case 16:
+            case 10:
+            case 11:
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
                 return "D";
             default:
                 return "F";
@@ -32,21 +63,25 @@ public class Method {
     }
 
     // Example usage: print student grade
-    
+
     public static void printStudentGrade(double gpa) {
         String grade = getGrade(gpa);
         System.out.println("Student GPA: " + gpa + ", Grade: " + grade);
     }
 
-    public static double findFloatShare(int amt , noOfDays,noOfDays,Yeardays)
-    {
-        return amount = amt * noOfDays * (noOfDays+1) /Yeardays * 100;
-        System.out.println("Float Share: " + amount );
+    public static double findFloatShare(int amt, int floatRate, int noOfDays, int Yeardays) {
+        return (amt * floatRate * (noOfDays + 1)) / (Yeardays * 100.0);
     }
 
     public static void main(String[] args) {
         double gpa = 4.5;
         printStudentGrade(gpa);
+        int amt = 10000;
+        int floatRate = 5;
+        int noOfDays = 30;
+        int Yeardays = 360;
+        double floatShare = findFloatShare(amt, floatRate, noOfDays, Yeardays);
+        System.out.println("Float Share: " + floatShare);
         double amount = 1000.0;
         double vatRate = 15.0; // 15% VAT
         double vat = calculateVAT(amount, vatRate);
