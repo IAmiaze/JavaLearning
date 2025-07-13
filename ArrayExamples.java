@@ -39,6 +39,7 @@ public class ArrayExamples {
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
+            
         }
     }
-}
+} 
