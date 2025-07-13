@@ -1,28 +1,43 @@
 public class Method {
+    // Method to calculate VAT
+    public static double calculateVAT(double amount, double vatRate) {
+        return amount * vatRate / 100.0;
+    }
+
+    public static String getGrade(double gpa) {
+        if (gpa >= 4.0) {
+            return "A+";
+        } else if (gpa >= 3.7) {
+            return "A";
+        } else if (gpa >= 3.3) {
+            return "A-";
+        } else if (gpa >= 3.0) {
+            return "B+";
+        } else if (gpa >= 2.7) {
+            return "B";
+        } else if (gpa >= 2.3) {
+            return "B-";
+        } else if (gpa >= 2.0) {
+            return "C+";
+        } else if (gpa >= 1.7) {
+            return "C";
+        } else if (gpa >= 1.0) {
+            return "D";
+        } else {
+            return "F";
+        }
+    }
+
+    // Example usage: print student grade
+    public static void printStudentGrade(double gpa) {
+        String grade = getGrade(gpa);
+        System.out.println("Student GPA: " + gpa + ", Grade: " + grade);
+    }
+
     public static void main(String[] args) {
-        // Example of a method call
-        greet("Alice");
-        int sum = add(5, 10);
-        System.out.println("Sum: " + sum);
+        double amount = 1000.0;
+        double vatRate = 15.0; // 15% VAT
+        double vat = calculateVAT(amount, vatRate);
+        System.out.println("VAT: " + vat);
     }
-
-    // Method to greet a user
-    public static void greet(String name) {
-        System.out.println("Hello, " + name + "!");
-    }
-
-    // Method to add two integers
-    public static int add(int a, int b) {
-        return a + b;
-    }
-
-    public static double vatcalculation(double price, double vatRate) {
-        return price + (price * vatRate / 100);
-    }
-    public static void printVatCalculation(double price, double vatRate) {
-        double result = vatcalculation(100, 15);
-        System.out.println("VAT Calculation: " + result);
-    }
-
-    
 }
