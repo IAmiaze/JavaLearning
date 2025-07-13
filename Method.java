@@ -38,6 +38,12 @@ public class Method {
         System.out.println("Student GPA: " + gpa + ", Grade: " + grade);
     }
 
+    public static double findFloatShare(int amt , noOfDays,noOfDays,Yeardays)
+    {
+        return amount = amt * noOfDays * (noOfDays+1) /Yeardays * 100;
+        System.out.println("Float Share: " + amount );
+    }
+
     public static void main(String[] args) {
         double gpa = 4.5;
         printStudentGrade(gpa);
