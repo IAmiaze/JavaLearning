@@ -16,5 +16,13 @@ public class Method {
         return a + b;
     }
 
+    public static double vatcalculation(double price, double vatRate) {
+        return price + (price * vatRate / 100);
+    }
+    public static void printVatCalculation(double price, double vatRate) {
+        double result = vatcalculation(price, vatRate);
+        System.out.println("VAT Calculation: " + result);
+    }
+
     
 }
