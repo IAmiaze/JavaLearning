@@ -20,7 +20,7 @@ public class Method {
         return price + (price * vatRate / 100);
     }
     public static void printVatCalculation(double price, double vatRate) {
-        double result = vatcalculation(price, vatRate);
+        double result = vatcalculation(100, 15);
         System.out.println("VAT Calculation: " + result);
     }
 
